@@ -19,7 +19,7 @@ export default function Header({ title }) {
         <h1>{title}</h1>
       </div>
       <nav>
-        <Button textOnly>Cart (0)</Button>
+        <Button textOnly>Cart {totalCartItems}</Button>
       </nav>
     </header>
   );
