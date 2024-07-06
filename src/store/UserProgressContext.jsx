@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 const UserProgressContext = createContext({
   progress: "",
@@ -36,9 +36,9 @@ export function UserProgressContextProvider({ children }) {
   };
 
   return (
-    <UserProgressContextProvider value={userProgress}>
+    <UserProgressContext.Provider value={userProgressCtx}>
       {children}
-    </UserProgressContextProvider>
+    </UserProgressContext.Provider>
   );
 }
 
